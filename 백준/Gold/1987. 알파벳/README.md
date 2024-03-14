@@ -30,3 +30,5 @@
 
  <p>첫째 줄에 말이 지날 수 있는 최대의 칸 수를 출력한다.</p>
 
+ https://moonsbeen.tistory.com/91
+
