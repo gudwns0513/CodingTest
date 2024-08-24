@@ -22,7 +22,7 @@ class Solution {
         visited[network] = true; //방문 기록
         
         for(int i = 0; i < computers.length; i++){//조건 만족하는 연결 네트워크 모두 방문
-            if(i != network && computers[network][i] == 1){
+            if(computers[network][i] == 1){
                 dfs(i, computers);
             }
         }
