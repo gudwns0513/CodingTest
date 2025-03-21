@@ -27,11 +27,7 @@ public class Main{
             if(num != 0){
                 heap.offer(num);
             }else{
-                if(!heap.isEmpty()){
-                    System.out.println(heap.poll());
-                }else{
-                    System.out.println(0);
-                }
+                System.out.println(heap.isEmpty() ? 0 : heap.poll());
             }
         }
 
