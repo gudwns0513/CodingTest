@@ -21,7 +21,7 @@ import java.util.*;
 
    - 참고
    N의 최대값이 3,000이므로 10^3000을 담을 자료형이 애매하기 때문에 Math.pow가 아닌 String에 for문으로 붙여서 계산
-    
+
  */
 public class Main {
 
@@ -60,15 +60,18 @@ public class Main {
         //최소 구하기
         while (min.length() < n) {
             int kIndex = str.indexOf("K");
+            //K가 없다면 모든 M을 묶어서 계산
             if (kIndex == -1) {
                 min.append(1);
                 for(int i = 0; i < str.length()-1; i++) {
                     min.append(0);
                 }
             }else{
+                //K가 첫번째에 있다면 5를 넣고 str에서 자르기
                 if (kIndex == 0) {
                     min.append(5);
                     str = str.substring(kIndex + 1);
+                //K가 첫번째가 아니라면 K앞의 M들은 모두 묶고 K는 하나로 계산 후 자르기
                 }else{
                     min.append(1);
                     for (int i = 0; i < kIndex-1; i++) {
